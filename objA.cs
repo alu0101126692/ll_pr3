@@ -12,7 +12,7 @@ public class objA : MonoBehaviour
     {
         charController.Instance.OnContactA += mostrarTexto;
         texto.text = "Se ha colisionado con B, A mostro este mensaje";
-
+        texto.enabled = false;
     }
 
     
