@@ -29,6 +29,25 @@ void Start()
 
 </code></pre>
 
+mostrarTexto() activa el componente text de un objeto Text y lo desactiva a los 3 segundos usando un metodo IEnumerator
+<pre><code>
+
+private void mostrarTexto() {
+        texto.enabled = true;
+
+        StartCoroutine(quitarMensaje());
+
+    }
+
+    private IEnumerator quitarMensaje() {
+        yield return new WaitForSeconds(3);
+        texto.enabled = false;
+    }
+
+</code></pre>
+
+En el objeto B se aumentará un float que simboliza la fuerza.
+
 El objeto A es el árbol y el B es la moneda.
 
 ![gif](./1.gif) 
