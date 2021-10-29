@@ -17,7 +17,7 @@ void OnCollisionEnter(Collision col) {
 
 Para que se pueda acceder al controlador desde cualquier otro script, se usa el patrón singleton.
 
-Una vez hecho lo anterior, se crea un script para cada objeto, y se enlazan los eventos correspondientes con los métodos, para que por ejemplo cuando se active el evento onContactA, se ejecute el método mostrarTexto en el objeto A.
+Una vez hecho lo anterior, se crea un script para cada objeto, y se enlazan los eventos correspondientes con los métodos, para que por ejemplo cuando se active el evento onContactA (que se activara cuando el jugador colisione con el objeto B), se ejecute el método mostrarTexto en el objeto A.
 
 
 <pre><code>
