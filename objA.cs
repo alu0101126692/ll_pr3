@@ -11,6 +11,8 @@ public class objA : MonoBehaviour
     void Start()
     {
         charController.Instance.OnContactA += mostrarTexto;
+        texto.text = "Se ha colisionado con B, A mostro este mensaje";
+
     }
 
     
@@ -18,7 +20,6 @@ public class objA : MonoBehaviour
     private void mostrarTexto() {
         texto.enabled = true;
 
-        texto.text = "Se ha colisionado con B, A mostro este mensaje";
         StartCoroutine(quitarMensaje());
 
     }
