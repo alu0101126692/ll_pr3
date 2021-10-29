@@ -5,14 +5,13 @@ using UnityEngine;
 public class objB : MonoBehaviour
 {
 
-    public charController delegado;
     public float fuerza;
 
     // Start is called before the first frame update
     void Start()
     {
-        delegado.OnContactB += addFuerza;
-        delegado.acercadoA += cambiarColor;
+        charController.Instance.OnContactB += addFuerza;
+        charController.Instance.acercadoA += cambiarColor;
 
         
     }

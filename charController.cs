@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public delegate void Contact();
+
 public class charController : MonoBehaviour
 {
     public float speed;
@@ -11,18 +14,23 @@ public class charController : MonoBehaviour
 	//public Text texto;
 
 
-
-    public delegate void Contact();
+    public static charController controller;
     public event Contact OnContactA;
     public event Contact OnContactB;
     public event Contact acercadoA;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {	
-        //texto.text = "Puntuacion: " + puntuacion;
+    public static charController Instance {
+        get {
+            return controller;
+        }
     }
+
+     private void Awake()
+    {
+        controller = this;
+    }
+   
 
     // Update is called once per frame
     void Update()

@@ -7,11 +7,10 @@ public class objA : MonoBehaviour
 {
 
     public Text texto;
-    public charController delegado;
     // Start is called before the first frame update
     void Start()
     {
-        delegado.OnContactA += mostrarTexto;
+        charController.Instance.OnContactA += mostrarTexto;
     }
 
     
